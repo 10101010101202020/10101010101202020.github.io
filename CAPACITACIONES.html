@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Página Web</title>
+  <style>
+    body {
+      background-color: green;
+    }
+    
+    #header {
+      height: 500px; /* Altura de la imagen de arriba */
+      background-image: url("https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/THCOUXFEMVALPMUGEEGWBJL2JQ.jpg"); /* Ruta de la imagen de arriba */
+      background-size: cover;
+      background-position: center;
+      transition: opacity 0.5s ease; /* Efecto de desvanecimiento */
+    }
+    
+    #content {
+      padding: 50px;
+      text-align: center;
+    }
+    
+    .box {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      margin: 10px;
+    }
+    
+    #footer {
+      padding: 50px;
+      text-align: center;
+    }
+    
+    .image {
+      opacity: 0;
+      transition: opacity 0.5s ease; /* Efecto de aparición */
+    }
+    
+    #back-btn {
+      margin-top: 20px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        
+        // Efecto de desvanecimiento en la imagen de arriba
+        $("#header").css("opacity", 1 - scroll/400);
+        
+        // Efecto de aparición en las imágenes de abajo
+        $(".image").each(function() {
+          if ($(this).offset().top < scroll + $(window).height() - 100) {
+            $(this).css("opacity", 1);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="header"></div>
+  
+  <div id="content">
+    <div class="box">
+      <img src="https://foremplex.com/wp-content/uploads/desarrollo-aplicaciones-web-300x300.png" alt="INFORMATICA" class="image">
+      <p>informatica</p>
+    </div>
+    <div class="box">
+      <img src="https://acmci.misiones.gob.ar/wp-content/uploads/2022/04/Dia-Mundial-Emprendimiento-300x300.jpg" alt="EMPRENDIMIENTO" class="image">
+      <p>emprendimiento</p>
+    </div>
+    <div class="box">
+      <img src="https://www.milcursosgratis.com/wp-content/uploads/2015/06/nutricion-300x300.jpg" alt="NUTRICION" class="image">
+      <p>nutricion</p>
+    </div>
+    <div class="box">
+      <img src="https://teodolito.top/wp-content/uploads/2019/10/El-calibrador-en-arquitectura-300x300.jpg" alt="ARQUITECTURA" class="image">
+      <p>Earquitectura</p>
+    </div>
+    <a href="pagina.html" class="egress-button">regresar</a>
+  </div>
+  
+  <div id="footer">
+    <h2>Contactanos</h2>
+    <p>contactanos al 656 289 4326, numero del instituto para cualquier duda</p>
+  </div> 
+  
+</body>
+</html>
+     

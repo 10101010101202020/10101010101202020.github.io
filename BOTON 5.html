@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Mi Escuela</title>
+<link rel="stylesheet" href="niga.css">
+<style>
+  .hidden-nav {
+    display: none;
+  }
+  
+  .active-nav .hidden-nav {
+    display: block;
+  }
+</style>
+</head>
+<body>
+<header>
+<div class="logo">
+<img src="https://apps2018.cobachih.edu.mx/assets/images/planteles/pl5.png" alt="Logo de la escuela">
+</div>
+<div class="header-text">
+<h1>CONVOCATORIA 2023</h1>
+<p>¡Donde los sueños se hacen realidad!</p>
+</div>
+</header>
+<nav>
+<ul>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+<li><a href="pagina.html">REGRESAR</a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+</ul>
+</nav>
+<main>
+<section class="news">
+<h2>ADMISION</h2>
+<article>
+<h3>CONVOCATORIA 2023</h3>
+<p>Este año celebramos la graduación de nuestra promoción 2021 en el estadio de la ciudad. Fue una celebración llena de emoción y alegría. ¡Felicitaciones a todos los graduados!</p>
+</article>
+<article>
+<h3>Concurso de Matemáticas</h3>
+<p>Nuestros estudiantes participaron en un concurso de matemáticas en la ciudad y obtuvieron excelentes resultados. ¡Felicitaciones a todos los participantes!</p>
+</article>
+</section>
+<section class="gallery">
+<h2>Galería</h2>
+<div class="gallery-images">
+<img src="https://www.chihuahuadigital.com.mx/Portals/6/Imagenes/cobach%202.jpg" alt="Imagen 1">
+<img src="https://cdn.ntmx.me/archivo/images/2019/03/30/sCDB92RUG1m6i.jpg" alt="Imagen 2">
+<img src="https://www.elheraldodejuarez.com.mx/incoming/viznex-bachilleres-5/ALTERNATES/FREE_768/Bachilleres%205" alt="Imagen 3">
+</div>
+</section>
+<section class="testimonials">
+<h2>Testimonios</h2>
+<article>
+<blockquote>
+<p>"Mi experiencia en Mi Escuela ha sido increíble. Los profesores son excelentes y me siento muy preparada para mi futuro. ¡Gracias Mi Escuela!"</p>
+</blockquote>
+<p class="author">- Ana García, Estudiante</p>
+</article>
+<article>
+<blockquote>
+<p>"Mi hijo ha estado asistiendo a Mi Escuela durante los últimos dos años y ha mejorado mucho en todas las áreas. Los profesores son muy dedicados y se preocupan por el éxito de sus estudiantes."</p>
+</blockquote>
+<p class="author">- Juan Pérez, Padre de familia</p>
+</article>
+</section>
+</main>
+<footer>
+<p>&copy; CONVOCTORIA</p>
+</footer>
+<script>
+  const navLinks = document.querySelectorAll('nav a');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('active-nav');
+    });
+  });
+</script>
+</body>
+</html>
